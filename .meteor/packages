@@ -24,6 +24,7 @@ izzilab:material-ui		# 基于React的材质设计组件包
 
 #js工具库
 rzymek:moment-locale-zh-cn # 时间处理函数
+kevohagan:sweetalert    #提示包
 
 #css库
 natestrauser:font-awesome # 图标库

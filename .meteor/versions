@@ -41,6 +41,7 @@ jquery@1.11.4
 jsx@0.2.3
 kadira:flow-router@2.10.1
 kadira:react-layout@1.5.3
+kevohagan:sweetalert@1.0.0
 lai:collection-extensions@0.1.4
 launch-screen@1.0.4
 less@2.5.1
