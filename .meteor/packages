@@ -1,0 +1,57 @@
+#############基本包
+#meteor基础包
+meteor-base             # 每个meteor应用都必须包含的,重要依赖:ddp(发布订阅协议),underscore(数据处理工具),livedata,webapp(增值HTTP 服务器),hot-code-push(代码热推送)
+mobile-experience       # 提高移动端用户的体验，比如延迟500毫秒的问题,重要依赖:launch-screen(启动页),mobile-status-bar(定制状态栏),fastclick(消除300毫秒的延迟)
+mongo                   # 操作mongo
+standard-minifiers      # 运行生产环境时候会把js、css压缩成一个文件
+es5-shim                # 在旧版本的JavaScript引擎上实现了ECMAScript 5的新特性,兼容IE8以下,旧版本的浏览器
+ecmascript              # 解析es6
+accounts-password		# 账户密码安全
+tracker					# 监控运行
+session					# 用户会话
+check 					# 检查数据类型的check函数
+kadira:flow-router		# 路由包，最佳路由方案
+#email                  # 邮件包代码
+#random                 # 随机函数库
+
+###############前端核心包，以React为中心前端解决方案
+static-html				# 处理静态网页
+react           		# 以React为中心前端解决方案,jsx文件解析包
+kadira:react-layout		# ReactLayout替代Blaze
+
+#react组件库
+izzilab:material-ui		# 基于React的材质设计组件包
+
+#js工具库
+rzymek:moment-locale-zh-cn # 时间处理函数
+
+#css库
+natestrauser:font-awesome # 图标库
+natestrauser:animate-css #css动画库
+
+#样式框架（基础页面构建方案）历史包（与mdl有冲突）所以不想考虑	
+materialize:materialize #下期迭代用：mdl设计
+
+
+#####################可选包
+alanning:roles			# 角色方案包
+
+#poetic:react-swiper 	#滑动的控件包
+
+#开发工具包	
+meteortoys:allthings   	# 可控数据
+
+#Cordova插件包
+mdg:camera              # 操控照相
+#mdg:geolocation        # 位置服务
+
+
+#自主开发包
+#quany:avatar-qiniu
+
+meteorhacks:npm         #npm包使用Meteor.npmRequire
+
+meteorhacks:kadira      #使用kadira性能分析,网站数据统计
+
+
+npm-container
