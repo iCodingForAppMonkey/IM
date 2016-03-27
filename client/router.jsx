@@ -7,6 +7,16 @@ const {
   RaisedButton,
   IconButton,
   Divider,
+  Card,
+  CardMedia,
+  CardTitle,
+  CardHeader,
+  Paper,
+  Menu,
+  MenuItem,
+  MobileTearSheet,
+  ActionGrade,
+  Styles,
   NavigationSubdirectoryArrowLeft,
   ListItem
 } = MUI;
@@ -48,26 +58,7 @@ FlowRouter.route('/',{
 FlowRouter.route('/register',{
 	name: "register",
 	action(params, queryParams) {
-		ReactLayout.render(EmptyLayout,{content:<div>
-			<AppBar iconElementLeft={<IconButton iconClassName="fa fa-arrow-left" />} title="猴吼" />
-			<div className="container" style={{marginTop:70}}>
-				<TextField
-			      hintText="请输入昵称，例如：猴年马月" fullWidth={true} 	
-			    />
-				<br/><br/>
-				<TextField
-			      hintText="请输入你的邮箱" fullWidth={true} 	
-			    />
-			    <br/><br/>
-			    <TextField
-			      hintText="请填写用户名" fullWidth={true}
-			      type="password"
-			    />
-    			<br/><br/><br/>
-				<RaisedButton label="注册" secondary={true} fullWidth={true}/>
-			</div>
-
-		</div>});
+		ReactLayout.render(EmptyLayout,{content:<Register />});
 	}
 });
 
@@ -77,31 +68,158 @@ FlowRouter.route('/chats',{
 		ReactLayout.render(EmptyLayout,{content:<div>
 			<AppBar showMenuIconButton={false} title="猴吼" titleStyle={{textAlign:"center"}} zDepth={2}/>
 			<ListItem 
-		      primaryText="测试"
+		      primaryText="大夫"
 		      leftAvatar={<Avatar src="http://7xnwr1.com2.z0.glb.qiniucdn.com/green.png" />} 
 		      rightIcon={<FontIcon className="fa fa-weixin" />} />
 		    <Divider />
 		    <ListItem 
-		      primaryText="测试"
+		      primaryText="猴吼"
 		      leftAvatar={<Avatar src="houhou.jpg" />} 
 		      rightIcon={<FontIcon className="fa fa-weixin" />} />
 		    <Divider />
+		    <FooterBar />
+		</div>});
+	}
+});
 
+FlowRouter.route('/friends',{
+	name: "friends",
+	action(params, queryParams) {
+		ReactLayout.render(EmptyLayout,{content:<div>
+			<AppBar showMenuIconButton={false}  title="好友" titleStyle={{textAlign:"center"}} 
+			zDepth={2} iconClassNameRight="fa fa-user-plus"
+			/>
+			
+		    <MobileTearSheet>
+			    <List>
+			      <ListItem
+			        primaryText="猴吼"
+			        leftIcon={<ActionGrade color={Styles.Colors.pinkA200} />}
+			        rightAvatar={<Avatar src="houhou.jpg" />}
+			      />
+			      <ListItem
+			        primaryText="大夫"
+			        rightAvatar={<Avatar src="http://7xnwr1.com2.z0.glb.qiniucdn.com/green.png" />}
+			      />
+			    </List>
+			    <Divider inset={true} />
+			    <List>
+			      <ListItem
+			        primaryText="韩医生"
+			        leftAvatar={
+			          <Avatar
+			            color={Styles.Colors.pinkA200} backgroundColor={Styles.Colors.transparent}
+			            style={{left: 8}}
+			          >
+			            A
+			          </Avatar>
+			        }
+			        rightAvatar={<Avatar src="http://7xnwr1.com2.z0.glb.qiniucdn.com/lidongsheng_hang.jpg" />}
+			      />
+			      <ListItem
+			        primaryText="逗比"
+			        rightAvatar={<Avatar src="http://7xnwr1.com2.z0.glb.qiniucdn.com/yuying_20140313134507_AkaMR.jpeg" />}
+			      />
+			    </List>
+			</MobileTearSheet>
+		    <FooterBar />
+		</div>});
+	}
+});
 
-		    <div style={{
-				width:"100%",
-				position:"fixed",
-				bottom:"0px",
-				textAlign:"center"
-			}}>
-				<Divider />
-				<div className="row" style={{fontSize:"0.4em",marginTop:"1em",marginBottom:"0px"}}>
-					<div className="col s3"><a href="/chats"><i className="fa fa-comments" style={{fontSize:"4em"}}></i><br/>猴吼</a></div>
-      				<div className="col s3"><a href="/friends"><i className="fa fa-users"  style={{fontSize:"4em"}}></i><br/>好友</a></div>
-      				<div className="col s3"><a href="/news"><i className="fa fa-wifi" style={{fontSize:"4em"}}></i><br/>动态</a></div>
-					<div className="col s3"><a href="/me"><i className="fa fa-user" style={{fontSize:"4em"}}></i><br/>我</a></div>
-				</div>
-			</div>
+FlowRouter.route('/news',{
+	name: "news",
+	action(params, queryParams) {
+		ReactLayout.render(EmptyLayout,{content:<div>
+			<AppBar showMenuIconButton={false}  title="动态" titleStyle={{textAlign:"center"}} 
+			zDepth={2} iconClassNameRight="fa fa-camera"
+			/>
+			<Card>
+			    <CardMedia
+				      overlay={<CardTitle children={<Avatar src="houhou.jpg" />} title="iCoding"  />}
+				    >
+			      <img src="http://lorempixel.com/600/337/nature/" />
+			    </CardMedia>
+			</Card>
+		    <Divider />
+		    <br />
+		    <div>
+		    	<CardHeader
+				      title="iCoding"
+				      subtitle="Meteor for iCoding!"
+				      avatar="houhou.jpg"
+				    />
+		    	<div style={{padding:16}}>
+		    		<Paper style={{
+					  height: 100,
+					  width: 100,
+					  margin: 5,
+					  textAlign: 'center',
+					  display: 'inline-block'
+					}} zDepth={1}/>
+					<Paper style={{
+					  height: 100,
+					  width: 100,
+					  margin: 5,
+					  textAlign: 'center',
+					  display: 'inline-block'
+					}} zDepth={1}/>
+					<Paper style={{
+					  height: 100,
+					  width: 100,
+					  margin: 5,
+					  textAlign: 'center',
+					  display: 'inline-block'
+					}} zDepth={1}/>
+					<div>
+					<small>
+						1小时
+					</small>
+					
+					<div className="pull-right">
+						<i className="fa fa-thumbs-up" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<i className="fa fa-comment" />
+					</div>
+					
+					</div>
+		    	</div>
+		    </div>
+		    <Divider />
+		    <br/>
+		     <br/>
+		      <br/>
+		       <br/>
+		    <FooterBar />
+		</div>});
+	}
+});
+
+FlowRouter.route('/me',{
+	name: "me",
+	action(params, queryParams) {
+		ReactLayout.render(EmptyLayout,{content:<div>
+			<AppBar showMenuIconButton={false}  title="我" titleStyle={{textAlign:"center"}} 
+			zDepth={2} 
+			/>
+			 <Menu>
+		      <MenuItem primaryText="头像" rightIcon={<Avatar src="houhou.jpg" />} />
+		      <MenuItem primaryText="名字" rightIcon={<spand>iCoding <i className="fa fa-angle-right"/></spand>} />
+		      <MenuItem primaryText="猴吼号" rightIcon={<div>iCoding <i className="fa fa-angle-right"/></div>} />
+		      <Divider />
+		      <MenuItem primaryText="我的二维码" rightIcon={<i className="fa fa-angle-right"/>} />
+		      <MenuItem primaryText="我的地址" rightIcon={<i className="fa fa-angle-right"/>} />
+		      <Divider />
+		      <MenuItem primaryText="性别" rightIcon={<div>男 <i className="fa fa-angle-right"/></div>} />
+		      <MenuItem primaryText="地区" rightIcon={<div>北京 <i className="fa fa-angle-right"/></div>} />
+		      <MenuItem primaryText="个性签名" rightIcon={<i className="fa fa-angle-right">无码不欢 </i>} />
+		      <MenuItem primaryText="聊天背景" rightIcon={<i className="fa fa-angle-right"/>} />
+		      <MenuItem primaryText="帮助与反馈" rightIcon={<i className="fa fa-angle-right"/>} />
+		       <MenuItem primaryText="关于猴吼" rightIcon={<i className="fa fa-angle-right"/>} />
+
+		       <MenuItem primaryText="退出登录" />
+		    </Menu>
+
+		    <FooterBar />
 		</div>});
 	}
 });

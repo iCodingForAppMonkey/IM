@@ -55,7 +55,7 @@ App.setPreference('StatusBarBackgroundColor', '#000000');
 App.setPreference('ShowSplashScreenSpinner', false);
 App.setPreference('android-targetSdkVersion', '22');
 App.setPreference('android-minSdkVersion', '18');
-App.accessRule('*');
+App.accessRule('*');//允许所有URL在应用内访问
 
 //cordova插件配置
 //App.configurePlugin(id, config)
