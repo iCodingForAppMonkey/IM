@@ -14,12 +14,12 @@ const {
   Paper,
   Menu,
   MenuItem,
-  MobileTearSheet,
-  ActionGrade,
   Styles,
   NavigationSubdirectoryArrowLeft,
   ListItem
 } = MUI;
+
+let {SvgIcons} = MUI.Libs;
 
 FlowRouter.route('/',{
 	name: "login",
@@ -87,18 +87,16 @@ FlowRouter.route('/friends',{
 	action(params, queryParams) {
 		ReactLayout.render(EmptyLayout,{content:<div>
 			<AppBar showMenuIconButton={false}  title="好友" titleStyle={{textAlign:"center"}} 
-			zDepth={2} iconClassNameRight="fa fa-user-plus"
-			/>
-			
-		    <MobileTearSheet>
+			zDepth={2} iconClassNameRight="fa fa-user-plus" />
 			    <List>
 			      <ListItem
 			        primaryText="猴吼"
-			        leftIcon={<ActionGrade color={Styles.Colors.pinkA200} />}
+			        leftIcon={<SvgIcons.ActionGrade color={Styles.Colors.pinkA200} />}
 			        rightAvatar={<Avatar src="houhou.jpg" />}
 			      />
 			      <ListItem
 			        primaryText="大夫"
+			        insetChildren={true}
 			        rightAvatar={<Avatar src="http://7xnwr1.com2.z0.glb.qiniucdn.com/green.png" />}
 			      />
 			    </List>
@@ -118,10 +116,10 @@ FlowRouter.route('/friends',{
 			      />
 			      <ListItem
 			        primaryText="逗比"
+			        insetChildren={true}
 			        rightAvatar={<Avatar src="http://7xnwr1.com2.z0.glb.qiniucdn.com/yuying_20140313134507_AkaMR.jpeg" />}
 			      />
 			    </List>
-			</MobileTearSheet>
 		    <FooterBar />
 		</div>});
 	}
@@ -202,8 +200,11 @@ FlowRouter.route('/me',{
 			zDepth={2} 
 			/>
 			 <Menu>
+			  <Divider />
 		      <MenuItem primaryText="头像" rightIcon={<Avatar src="houhou.jpg" />} />
-		      <MenuItem primaryText="名字" rightIcon={<spand>iCoding <i className="fa fa-angle-right"/></spand>} />
+		      <Divider />
+		      <MenuItem primaryText="名字" secondaryText="iCoding&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" rightIcon={ <i className="fa fa-angle-right"/>} />
+		      <Divider />
 		      <MenuItem primaryText="猴吼号" rightIcon={<div>iCoding <i className="fa fa-angle-right"/></div>} />
 		      <Divider />
 		      <MenuItem primaryText="我的二维码" rightIcon={<i className="fa fa-angle-right"/>} />
@@ -215,10 +216,12 @@ FlowRouter.route('/me',{
 		      <MenuItem primaryText="聊天背景" rightIcon={<i className="fa fa-angle-right"/>} />
 		      <MenuItem primaryText="帮助与反馈" rightIcon={<i className="fa fa-angle-right"/>} />
 		       <MenuItem primaryText="关于猴吼" rightIcon={<i className="fa fa-angle-right"/>} />
-
+		       <Divider />
 		       <MenuItem primaryText="退出登录" />
 		    </Menu>
-
+		    <br/>
+		    <br/>
+		    <br/>
 		    <FooterBar />
 		</div>});
 	}
