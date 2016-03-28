@@ -28,7 +28,7 @@ FlowRouter.route('/',{
 			<AppBar showMenuIconButton={false} title="猴吼" />
 			<div className="container" style={{marginTop:70,textAlign:"center"}}>
 				<spand>
-					<Avatar src="houhou.jpg" size={60}/>
+					<Avatar src="favicon.png" size={60}/>
 				</spand>
 				<br/><br/>
 				<TextField
@@ -74,7 +74,7 @@ FlowRouter.route('/chats',{
 		    <Divider />
 		    <ListItem 
 		      primaryText="猴吼"
-		      leftAvatar={<Avatar src="houhou.jpg" />} 
+		      leftAvatar={<Avatar src="favicon.png" />} 
 		      rightIcon={<FontIcon className="fa fa-weixin" />} />
 		    <Divider />
 		    <FooterBar />
@@ -92,7 +92,7 @@ FlowRouter.route('/friends',{
 			      <ListItem
 			        primaryText="猴吼"
 			        leftIcon={<SvgIcons.ActionGrade color={Styles.Colors.pinkA200} />}
-			        rightAvatar={<Avatar src="houhou.jpg" />}
+			        rightAvatar={<Avatar src="favicon.png" />}
 			      />
 			      <ListItem
 			        primaryText="大夫"
@@ -134,7 +134,7 @@ FlowRouter.route('/news',{
 			/>
 			<Card>
 			    <CardMedia
-				      overlay={<CardTitle children={<Avatar src="houhou.jpg" />} title="iCoding"  />}
+				      overlay={<CardTitle children={<Avatar src="favicon.png" />} title="iCoding"  />}
 				    >
 			      <img src="http://lorempixel.com/600/337/nature/" />
 			    </CardMedia>
@@ -145,7 +145,7 @@ FlowRouter.route('/news',{
 		    	<CardHeader
 				      title="iCoding"
 				      subtitle="Meteor for iCoding!"
-				      avatar="houhou.jpg"
+				      avatar="favicon.png"
 				    />
 		    	<div style={{padding:16}}>
 		    		<Paper style={{
@@ -201,9 +201,9 @@ FlowRouter.route('/me',{
 			/>
 			 <Menu>
 			  <Divider />
-		      <MenuItem primaryText="头像" rightIcon={<Avatar src="houhou.jpg" />} />
+		      <MenuItem primaryText="头像" rightIcon={<Avatar src="favicon.png" />} />
 		      <Divider />
-		      <MenuItem primaryText="名字" secondaryText="<small>iCoding</small>small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" rightIcon={ <i className="fa fa-angle-right"/>} />
+		      <MenuItem primaryText="名字" secondaryText="iCoding&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" rightIcon={ <i className="fa fa-angle-right"/>} />
 		      <Divider />
 		      <MenuItem primaryText="猴吼号" rightIcon={<div>iCoding <i className="fa fa-angle-right"/></div>} />
 		      <Divider />
