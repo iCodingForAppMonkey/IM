@@ -203,7 +203,7 @@ FlowRouter.route('/me',{
 			  <Divider />
 		      <MenuItem primaryText="头像" rightIcon={<Avatar src="houhou.jpg" />} />
 		      <Divider />
-		      <MenuItem primaryText="名字" secondaryText="iCoding&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" rightIcon={ <i className="fa fa-angle-right"/>} />
+		      <MenuItem primaryText="名字" secondaryText="<small>iCoding</small>small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" rightIcon={ <i className="fa fa-angle-right"/>} />
 		      <Divider />
 		      <MenuItem primaryText="猴吼号" rightIcon={<div>iCoding <i className="fa fa-angle-right"/></div>} />
 		      <Divider />
